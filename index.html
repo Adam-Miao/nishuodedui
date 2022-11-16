@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>You are RIGHT, but...</title>
+</head>
+<body>
+<div>
+    你说的对，但是《<input id="game">》是由<input id="author">自主研发的一款<input
+        id="kind">游戏。故事发生在一个被称作「<input id="world">」的世界，在这里被<input id="selector">选中的<input
+        id="whom">将被授予「<input id="award">」，引导<input id="power">之力。你将扮演一位名为「<input id="player">」的神秘角色，在自由的旅行中邂逅<input
+        id="friend">，和<input id="colleague">一起击败<input id="enemy">，寻找失散的<input id="lost">，同时，逐步发掘「<input
+        id="truth">」的真相。
+</div>
+<a onclick="clicked()">Copy</button>
+<p id="aaaa">
+<script>
+    var a = document.getElementById("game").value;
+    var b = document.getElementById("author").value;
+    var c = document.getElementById("kind").value;
+    var d = document.getElementById("world").value;
+    var e = document.getElementById("selector").value;
+    var f = document.getElementById("whom").value;
+    var g = document.getElementById("award").value;
+    var h = document.getElementById("power").value;
+    var j = document.getElementById("player").value;
+    var k = document.getElementById("friend").value;
+    var l = document.getElementById("colleague").value;
+    var m = document.getElementById("enemy").value;
+    var o = document.getElementById("lost").value;
+    var p = document.getElementById("truth").value;
+    var q = document.getElementById("aaaa")
+    String.prototype.format=function(args){
+        return this.replace(/\{(\w+)\}/g,
+            function(s, i){
+            return args[i];
+            });
+    }
+    var clicked = function () {
+        q.innerHTML="你说的对，但是《{0}》是由{1}自主研发的一款{2}游戏。故事发生在一个被称作「{3}」的世界，在这里被{4}选中的{5}将被授予「{6}」，引导{7}之力。你将扮演一位名为「{8}」的神秘角色，在自由的旅行中邂逅{9}，和{10}一起击败{11}，寻找失散的{12}， 同时，逐步发掘「{13}」的真相。".format([a, b, c, d, e, f, g, h, j, k, l, m, o, p]);
+    }
+</script>
+</body>
+</html>
